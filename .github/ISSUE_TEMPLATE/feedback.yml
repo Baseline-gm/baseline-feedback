@@ -1,0 +1,32 @@
+name: Feedback
+description: Impressions, confusion, friction, ideas — anything that isn't a bug
+title: "[feedback] "
+labels: ["alpha-feedback"]
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Onboarding confusion
+        - Simulation trust
+        - Decision friction
+        - UI readability
+        - What made me want to continue
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: body
+    attributes:
+      label: Tell us
+      description: What you experienced, where, and what you wished had happened
+    validations:
+      required: true
+  - type: input
+    id: context
+    attributes:
+      label: Team / season / day (if relevant)
+      placeholder: "UTA, 2027, Day 43"
+    validations:
+      required: false

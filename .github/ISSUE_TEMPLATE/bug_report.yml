@@ -1,0 +1,47 @@
+name: Bug report
+description: Something broke, crashed, or behaved wrong in the alpha
+title: "[bug] "
+labels: ["alpha-feedback", "bug"]
+body:
+  - type: input
+    id: context
+    attributes:
+      label: Team / season / day
+      description: Which franchise you run, the in-game season, and the day counter (top bar)
+      placeholder: "UTA, 2027, Day 43"
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: What happened, and how to reproduce it
+      description: Step by step. What did you expect instead?
+      placeholder: |
+        1. Went to Trade hub → Build trade
+        2. ...
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and OS
+      placeholder: "Chrome 138 / macOS 15"
+    validations:
+      required: true
+  - type: textarea
+    id: save
+    attributes:
+      label: Exported save file
+      description: >
+        In the game: Settings → Save and support → Export Save. Drag the
+        downloaded file into this text box (zip it first if GitHub rejects
+        the extension). A save file makes most bugs reproducible in minutes.
+    validations:
+      required: false
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else
+      description: Screenshots, console errors (F12 → Console), weird timing
+    validations:
+      required: false

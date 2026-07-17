@@ -1,0 +1,22 @@
+name: Closed alpha waitlist request
+description: Ask for an invite to the closed alpha
+title: "Closed alpha waitlist request"
+labels: ["alpha-waitlist"]
+body:
+  - type: textarea
+    id: who
+    attributes:
+      label: About you
+      description: >
+        What draws you to a deep front-office sim? Which sims have you played
+        (Basketball GM, OOTP, FM, ZenGM, ...)? No wrong answers — this just
+        helps sequence invite waves.
+    validations:
+      required: true
+  - type: input
+    id: setup
+    attributes:
+      label: Browser and OS you'd play on
+      placeholder: "Chrome / Windows 11"
+    validations:
+      required: true
