@@ -43,7 +43,7 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 
 ### Added
 
-- **Generated league** — new leagues start from a generated roster with fictional teams, a realistic payroll spread, free agents, 14-man rosters and longer contracts. The game no longer includes the real-player rosters added in August.
+- **Generated league** — new leagues start from a generated roster with fictional teams, a realistic payroll spread, free agents, 14-man rosters and longer contracts.
 - **2026-27 season calendar with a month view**, a two-way game limit, and minutes restrictions.
 - **Draft night** — a reveal after each pick you confirm, and a read-only Draft Assets page.
 - **A fuller player profile header and Trade Hub card.**
