@@ -3,6 +3,12 @@ description: Impressions, confusion, friction, ideas — anything that isn't a b
 title: "[feedback] "
 labels: ["alpha-feedback"]
 body:
+  - type: markdown
+    attributes:
+      value: >
+        **This issue is public.** Anyone can read it. Leave out personal
+        details such as your email address or real name, and check an
+        exported save before you attach it.
   - type: dropdown
     id: category
     attributes:
