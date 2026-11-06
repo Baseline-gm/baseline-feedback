@@ -6,6 +6,93 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 
 ---
 
+## [2026-11-06] — Contract and trade rules, safer saves, fictional teams
+
+**Why:** Contract and trade rules were rechecked against the 2023 CBA and brought closer to it, and saves gained the protections a long franchise needs: checks on import, a guard against a stale browser tab, backups and a recovery copy. Covers 2026-11-01 to 2026-11-06.
+
+### Added
+
+- **Backups and a recovery copy** — each league shows when it was last backed up, and the offseason prompts for a backup. Before a migration, or before saving over a league that loaded with warnings, the game keeps one recovery copy that you can download from Settings.
+- **A Main menu that saves first, and one card per franchise** — saves are named by team and season (for example "Navigators 2026–27"), and Continue resumes in one press.
+- **Leftover free agents sign during the season** — unsigned players can be signed in the preseason and the regular season, and their asks fall toward the minimum by the trade deadline.
+- **The box score lists players who didn't play, with the reason.**
+
+### Changed
+
+- **Fictional teams everywhere** — teams that shared a real club's name have been renamed.
+- **Contract rules** — Bird re-sign ceilings and the max salary; veteran extensions up to 140% of the Estimated Average Player Salary; extension ceilings, terms and the one- and two-season extension ban; qualifying offers; rookie-scale team options on years 3 and 4; 10-day contracts at the prorated minimum; any team can convert a two-way player at the minimum; the two-way limit is 50 Active List games; the minimum salary scale grows with the cap; waiver dead cap is stretched over 2N+1 seasons.
+- **Trade rules** — one Stepien Rule on every trade path, with protected firsts not counted; the Seven Year Rule covers second-round picks; sign-and-trade has no value test; a signing's trade restriction runs to the later of 60 days and day 90; second-apron teams may use a same-season Standard TPE; the strictest hard cap applies on every signing route.
+- **A payroll exactly on the tax line or an apron no longer counts as over it.**
+- **Years left on a contract reads the same on every screen.**
+
+### Fixed
+
+- A stale tab can no longer overwrite a newer save, and imported saves are checked field by field.
+- AI teams accept and refuse trades consistently, and charge for salary they absorb beyond a player's worth. Star bonuses fade with age, form and injury.
+- Bird tenure counts in seasons across contracts; imported players get Bird rights; players who decline an option keep their service, Bird rights and a cap hold.
+- Generated leagues draft generated prospects; the draft reveal names the drafted player, and the pick notice no longer covers the next prospects.
+- The Conference Finals MVP goes to a player on the series winner; every sim path reaches a Cup champion; a signed free agent's cap hold clears from every team.
+- Regular-season play is limited when a team has fewer than 14 players.
+- A free agent's profile uses the theme accent instead of orange; Players and Roster work better with screen readers; the dashboard's loading placeholder fits a phone screen.
+
+---
+
+## [2026-10-31] — Generated league, trade legality, honest saves
+
+**Why:** Playtesting found trades the CBA forbids, CPU teams breaking rules the user could not, and saves that could be lost without a warning. New leagues now start from a generated league with fictional teams. Covers 2026-08-24 to 2026-10-31; September had no player-facing changes.
+
+### Added
+
+- **Generated league** — new leagues start from a generated roster with fictional teams, a realistic payroll spread, free agents, 14-man rosters and longer contracts.
+- **2026-27 season calendar with a month view**, a two-way game limit, and minutes restrictions.
+- **Draft night** — a reveal after each pick you confirm, and a read-only Draft Assets page.
+- **A fuller player profile header and Trade Hub card.**
+- **Trade offers arrive as an incoming call from the other GM**; the sim reveal is shorter and marks what changed; the end of your season gets its own moment.
+
+### Changed
+
+- **What your front office knows** — other teams' players and prospects show only what your GM could know, on every screen.
+- **Money rules** — luxury tax on cap-indexed brackets with the repeater rule; MLE tiers follow the first apron, and the Taxpayer MLE hard-caps a team at the second; full Bird re-signs up to the player max; max salary and Bird-gated five-year terms in free agency; contract length depends on how the player was signed; Bird rights carry through trades; two-way players don't count against the standard roster.
+- **Contract options are decided the summer before the option year**, and asks from your own players are anchored to market value.
+
+### Fixed
+
+- **Trades** — CPU trades are judged by the same rules as yours when they go through: legality, team finances, salary aggregation over the apron, the Stepien Rule, three-team trades and cooldowns. Salary matching works per player for aggregation and trade exceptions, and trade exceptions expire with their year.
+- **Saves** — a failed save shows "Not saved", and a damaged save is refused on load; every league change autosaves; imports are validated before they are stored; a restore that never finished is not restored again automatically; a save still being written can no longer land in the next league.
+- **Sim** — every team plays 82 games, 41 at home; one awards record per season; a team that runs out of eligible players is handled as the NBA rules require; unsigned free agents retire, and low morale no longer retires players under 34; CPU teams sign their first-round picks.
+- Stricter security headers; the app reloads once if a page is out of date after an update; keyboard focus stays inside open dialogs.
+
+---
+
+## [2026-08-23] — Alpha wave 1: free-agency board, dashboard rebuild
+
+**Why:** The first alpha wave found offseason blockers, a flood of trade offers, and rules that did not hold. This period fixed those and rebuilt the free-agency page and the dashboard. Covers 2026-07-18 to 2026-08-23.
+
+### Added
+
+- **Free-agency contest board** — the free-agency page shows who is leading the race for each player, with details in a bottom sheet.
+- **Dashboard** — a team briefing, a result for each decision, and a season strip.
+- **Cap runway and roster shape charts**; task dialogs open as bottom sheets.
+- **Trade-offer memory** — after you decline, a team cools off, raises its offer, or targets a different need.
+- **The cap year opens before free agency, and contracts are graded over time**; each decision and the game's verdict are recorded in the save.
+
+### Changed
+
+- **Rosters open at 14 standard players plus a two-way**, and the 15-man limit holds on every trade and signing.
+- **Trade inbox** — about 15 credible offers a season instead of about 200.
+- **Modern-era salaries are scaled** so the cap rules have room to work, and the league starts in the 2026-27 cap year.
+- **Readable colour** — status colours meet WCAG AA contrast, and the team colour no longer tints status scales.
+
+### Fixed
+
+- **Offseason** — blockers from the first wave, a page that froze in a render loop, and the move from the draft to free agency.
+- **Free agency** — teams no longer stall against the MLE; new leagues get their mid-level exception; first-apron teams use the BAE; RFA offer sheets resolve before rosters are filled; rebuilding teams bid on young stars.
+- **Trades** — refusals say what they mean and stay on screen; Balance Offer suggests only tradeable players; the trade deadline stops the sim once and says so.
+- **Rules** — teams below the minimum team salary are charged for the gap; Expanded TPE bands and Free Agent Amounts; cap thresholds grow at the new league year.
+- Clickable rows and headers work from the keyboard, and the cap sheet works with a screen reader.
+
+---
+
 ## [2026-07-17] — Summer feature depth & alpha-readiness completion
 
 **Why:** Baseline's alpha vertical-slice window (late June–mid July 2026) shipped negotiation depth, user-playable two-way contracts, infrastructure hardening, E2E coverage for the core game loop, and QA-driven refinements. The engine now enforces ownership atomicity, FA-round bidding routes through negotiation, minimum-salary signing works, and season-long play is supported end-to-end with session restore. Owner-requested player designation brackets (block/untouchable/target) add front-office control.
@@ -588,6 +675,6 @@ Part of epic #29 — consolidate app on shadcn/ui primitives. Removes parallel c
 
 ---
 
-## Older entries archived to docs/CHANGELOG-ARCHIVE.md
+## Older entries
 
-Entries before 2026-04-17 archived (includes 04-16 Playoff Awards page, 04-15 shadcn Awards/HoF, 04-14 Dashboard redesign + animations). See docs/CHANGELOG-ARCHIVE.md for full history.
+Entries before 2026-04-17 are not mirrored here.
